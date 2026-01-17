@@ -1,0 +1,28 @@
+# Firebase App Hosting Configuration
+# https://firebase.google.com/docs/app-hosting/configure
+
+# The runtime environment for your app.
+runtime:
+  # The language your app is written in.
+  # Currently, App Hosting supports Node.js and Python.
+  language: python
+  # The version of the language to use.
+  version: "3.9"
+
+# Environment variables to set for your app.
+env:
+  - name: SECRET_KEY
+    value: "firebase-secret-key"
+  - name: DEBUG
+    value: "False"
+
+# Build settings for your app.
+runConfig:
+  # The command to start your app.
+  # This should match the CMD in your Dockerfile or your entry point.
+  command: gunicorn --worker-class eventlet -w 1 --bind :$PORT simple_app:app
+  # The region to deploy your app in.
+  region: us-central1
+  # The CPU and memory to allocate for your app.
+  cpu: 1
+  memoryMiB: 512

@@ -1,0 +1,16 @@
+venv
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.db
+.sqlite
+.env
+.git
+.gitignore
+.vscode
+.idea
+*.log
+README_FIREBASE.md
+PREVIEW_GUIDE.md
