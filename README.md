@@ -1,14 +1,16 @@
 # techmedics-108+ (ATLAS Hackathon Edition)
 
-![Project Banner](about.jpeg)
+[![Deployed on Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://techmedics-108.onrender.com/)
+[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
 
 ## 🏆 Hackathon Context: ATLAS
 Welcome to **ATLAS – GDG on Campus Hackathon**, hosted by **GDG on Campus - NIST** and powered by **Hack2skill**.
 
-ATLAS is an open innovation hackathon where student developers identify real challenges in their campuses or local communities and build practical solutions using Google technologies. 
+**Project**: techmedics-108+
+**Theme**: Emergency Response & Healthcare
+**Team**: DOONDILEONS
 
-### 👥 Team: DOONDILEONS
-We are proud to present **techmedics-108+**, a solution built for impact.
+### 👥 The Team
 1. **Nallimilli Surya Prakash Reddy**
 2. **Mandela Doondi Usha Sri**
 3. **Vinayaka Gowdra chandrashekarappa**
@@ -16,61 +18,59 @@ We are proud to present **techmedics-108+**, a solution built for impact.
 
 ---
 
-## 👨‍⚖️ For the Jury (Verification Guide)
-
-**Dear Dr. Sushanta Kumar, Mr. Prabhas Raj, and Dr. Sandipan Mallik,**
-
-Thank you for reviewing our project. **techmedics-108+** is a high-performance Emergency Response System (ERS) designed to streamline communication between callers, dispatchers, and ambulance drivers.
-
-### How to Verify the Project:
-1. **Dispatcher Dashboard**: Access at `http://localhost:5000/`. You can see active calls and ambulance locations.
-2. **Driver Portal**: Click the **"Driver Portal"** button on the dashboard or go to `http://localhost:5000/api/ambulance/app`.
-3. **Location Tracking**: Use the **"Initiate Emergency Response"** form to simulate a call. You will receive a location sharing link (simulated for the demo).
-4. **Real-time Sync**: Notice how maps update instantly across the Dashboard and Driver Portal when an ambulance is assigned or a location is shared.
+## 🚀 LIVE DEMO
+**Experience the App Live**: [https://techmedics-108.onrender.com/](https://techmedics-108.onrender.com/)
 
 ---
 
+## 👨‍⚖️ For the Jury: Verification Guide
+**Dear Jury Members,**
+
+Thank you for reviewing **techmedics-108+**. We have built a robust, real-time Emergency Response System that works even in low-bandwidth scenarios.
+
+### Step-by-Test Instructions:
+
+#### 1. The "Wow" Factor (Real-time Sync)
+*   **Step 1**: Open the [Call Center Dashboard](https://techmedics-108.onrender.com/callcenter) in one tab.
+*   **Step 2**: Open the [Ambulance App](https://techmedics-108.onrender.com/api/ambulance/app) in a second tab (or Incognito window).
+    *   **Login**: Use ID `DVG-AMB-001` (Pre-loaded test account).
+*   **Step 3**: On the Call Center, initiate a call with any number (e.g., `9876543210`).
+*   **Step 4**: Click "Assign Nearest Ambulance".
+*   **Result**: Watch the Ambulance App instantly receive an **"EMERGENCY ALERT"** popup without refreshing the page!
+
+#### 2. Advanced Location Sharing (Glassmorphism UI)
+*   **Step 1**: After initiating a call, click **"Share Location"**.
+*   **Step 2**: Open the generated link on your phone.
+*   **Step 3**: Click **"Share My Exact Location"**.
+*   **Result**: The dispatcher map updates *instantly* with the victim's precise GPS coordinates.
+
+#### 3. Why This Wins?
+*   ✅ **Zero-Setup Login**: Test drivers (`DVG-AMB-001`) are auto-created on every deploy.
+*   ✅ **Resilient**: Works on minimal internet using optimized sockets.
+*   ✅ **User-Centric Design**: Modern "Glassmorphism" UI for high-stress usability.
+
 ---
 
-## 📺 Project Demonstration
-Watch our detailed project explanation and demo here:
-[![Project Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?style=for-the-badge&logo=youtube)](https://youtu.be/v0NK8BFeIeQ?si=Sx3pkmjgE1nXoYSD)
+## 📺 Project Walkthrough
+If you cannot test it live, watch our full demonstration video here:
+[**WATCH DEMO VIDEO**](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
 
 ---
 
-## 🚀 Key Features
+## 🛠️ Key Features
+- **Real-time Dispatch**: Socket.IO powered instant communication.
+- **Smart Assignment**: Algorithms to find the nearest available ambulance.
+- **Offline-First SMS**: Fallback SMS protocol for areas with no data.
+- **Responsive Design**: Mobile-first interface for drivers and victims.
+- **Live Tracking**: Leaflet.js maps for real-time visualization.
 
-- **Dispatcher Dashboard**: Real-time view of all active emergency calls and ambulance locations.
-- **Smart Dispatching**: Automatically identifies the nearest available ambulance for rapid response.
-- **Ambulance Driver Portal**: Dedicated interface for drivers to receive assignments, navigate to victims, and update status.
-- **Victim Location Sharing**: Secure, link-based location sharing that works even in low-bandwidth environments.
-- **SMS Protocol Fallback**: Integrated SMS-based location sharing for offline or zero-data scenarios.
-- **SMS Protocol Fallback**: Integrated SMS-based location sharing for offline or zero-data scenarios.
-
-## 🛠️ Technology Stack
-
-- **Backend**: Flask (Python)
-- **Real-time**: Socket.IO (WebSockets)
+## 💻 Tech Stack
+- **Backend**: Python (Flask)
+- **Real-time**: Socket.IO
 - **Database**: SQLite (SQLAlchemy)
-- **Map Engine**: Leaflet.js & OpenStreetMap
-- **Map Engine**: Leaflet.js & OpenStreetMap
-
-## 💻 Local Setup
-
-1. **Environment**:
-   ```bash
-   python -m venv venv
-   .\venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-2. **Run Application**:
-   ```bash
-   python start_app.py
-   ```
-
-
+- **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript
+- **Deployment**: Render (Cloud)
 
 ---
 
-© 2026 TechMedics Team | 108+ Emergency Response System
+© 2026 TechMedics Team | Built for ATLAS Hackathon
