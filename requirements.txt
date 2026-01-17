@@ -6,6 +6,7 @@ requests==2.26.0
 python-dotenv==0.19.1
 geopy==2.2.0
 gunicorn==20.1.0
+
 eventlet==0.30.2
 dnspython==1.16.0
 Werkzeug==2.0.3

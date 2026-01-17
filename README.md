@@ -23,8 +23,8 @@ We are proud to present **techmedics-108+**, a solution built for impact.
 Thank you for reviewing our project. **techmedics-108+** is a high-performance Emergency Response System (ERS) designed to streamline communication between callers, dispatchers, and ambulance drivers.
 
 ### How to Verify the Project:
-1. **Dispatcher Dashboard**: Access at `http://localhost:8080/`. You can see active calls and ambulance locations.
-2. **Driver Portal**: Click the **"Driver Portal"** button on the dashboard or go to `http://localhost:8080/api/ambulance/app`.
+1. **Dispatcher Dashboard**: Access at `http://localhost:5000/`. You can see active calls and ambulance locations.
+2. **Driver Portal**: Click the **"Driver Portal"** button on the dashboard or go to `http://localhost:5000/api/ambulance/app`.
 3. **Location Tracking**: Use the **"Initiate Emergency Response"** form to simulate a call. You will receive a location sharing link (simulated for the demo).
 4. **Real-time Sync**: Notice how maps update instantly across the Dashboard and Driver Portal when an ambulance is assigned or a location is shared.
 
@@ -45,7 +45,7 @@ Watch our detailed project explanation and demo here:
 - **Ambulance Driver Portal**: Dedicated interface for drivers to receive assignments, navigate to victims, and update status.
 - **Victim Location Sharing**: Secure, link-based location sharing that works even in low-bandwidth environments.
 - **SMS Protocol Fallback**: Integrated SMS-based location sharing for offline or zero-data scenarios.
-- **Production-Ready**: Fully containerized with Docker and optimized for Firebase Studio/Cloud Run deployment.
+- **SMS Protocol Fallback**: Integrated SMS-based location sharing for offline or zero-data scenarios.
 
 ## 🛠️ Technology Stack
 
@@ -53,7 +53,7 @@ Watch our detailed project explanation and demo here:
 - **Real-time**: Socket.IO (WebSockets)
 - **Database**: SQLite (SQLAlchemy)
 - **Map Engine**: Leaflet.js & OpenStreetMap
-- **Deployment**: Firebase Hosting & Google Cloud Run
+- **Map Engine**: Leaflet.js & OpenStreetMap
 
 ## 💻 Local Setup
 
@@ -69,23 +69,7 @@ Watch our detailed project explanation and demo here:
    python start_app.py
    ```
 
-## 🐳 Docker Preview
 
-To test the production environment locally:
-
-```bash
-docker build -t ers-preview .
-docker run -p 8080:8080 ers-preview
-```
-
-## ☁️ Firebase Deployment
-
-This project is configured for **Firebase Studio**.
-1. Connect this repository to [Firebase Studio](https://firebase.studio).
-2. Deploy to **Cloud Run** (Backend) and **Firebase Hosting** (Frontend).
-
-For detailed deployment steps, see [README_FIREBASE.md](README_FIREBASE.md).
-For preview instructions, see [PREVIEW_GUIDE.md](PREVIEW_GUIDE.md).
 
 ---
 
