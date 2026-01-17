@@ -41,6 +41,68 @@ app.config.from_mapping(
     DEBUG=DEBUG
 )
 
+# Initialize database tables
+def init_db_tables():
+    try:
+        with app.app_context():
+            db = get_db()
+            # Create ambulances table
+            db.execute('''
+            CREATE TABLE IF NOT EXISTS ambulances (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                ambulance_id TEXT UNIQUE NOT NULL,
+                driver_name TEXT NOT NULL,
+                driver_phone TEXT NOT NULL,
+                latitude REAL NOT NULL,
+                longitude REAL NOT NULL,
+                is_available INTEGER DEFAULT 1,
+                last_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+            ''')
+            
+            # Create emergency_calls table
+            db.execute('''
+            CREATE TABLE IF NOT EXISTS emergency_calls (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                caller_phone TEXT NOT NULL,
+                call_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                status TEXT DEFAULT 'initiated',
+                location_link_id TEXT UNIQUE,
+                latitude REAL,
+                longitude REAL,
+                address TEXT,
+                assigned_ambulance_id INTEGER,
+                assigned_time TIMESTAMP,
+                location_shared_time TIMESTAMP,
+                pickup_time TIMESTAMP,
+                completion_time TIMESTAMP,
+                FOREIGN KEY (assigned_ambulance_id) REFERENCES ambulances (id)
+            )
+            ''')
+            
+            # Seed test data if empty
+            cursor = db.execute("SELECT COUNT(*) FROM ambulances")
+            count = cursor.fetchone()[0]
+            if count == 0:
+                print("Seeding database with test ambulances...")
+                test_ambulances = [
+                    ("DVG-AMB-001", "Rajesh Kumar", "+919876543210", 14.4732, 75.9260),
+                    ("DVG-AMB-002", "Suresh Gowda", "+919876543211", 14.4510, 75.9190)
+                ]
+                db.executemany(
+                    "INSERT OR IGNORE INTO ambulances (ambulance_id, driver_name, driver_phone, latitude, longitude) VALUES (?, ?, ?, ?, ?)",
+                    test_ambulances
+                )
+                print("Database seeded with test data.")
+
+            db.commit()
+            print("Database tables initialized successfully.")
+    except Exception as e:
+        print(f"Error initializing database tables: {e}")
+
+# Run initialization
+init_db_tables()
+
 # Initialize SocketIO
 socketio = SocketIO(app, cors_allowed_origins="*")
 
@@ -386,6 +448,9 @@ def register_ambulance():
          data['latitude'], data['longitude']]
     )
     
+    if not ambulance_id:
+        return jsonify({"success": False, "error": "Failed to register ambulance (Database Error)"}), 500
+    
     # Get the created ambulance
     ambulance = query_db(
         'SELECT * FROM ambulances WHERE id = ?',
@@ -393,6 +458,9 @@ def register_ambulance():
         one=True
     )
     
+    if not ambulance:
+         return jsonify({"success": False, "error": "Registered but failed to retrieve details"}), 500
+
     return jsonify({
         "success": True,
         "ambulance": dict(ambulance)
