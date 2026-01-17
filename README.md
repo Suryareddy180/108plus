@@ -93,21 +93,13 @@ Built on a robust Flask backend with Socket.IO for real-time events, our archite
 ## 📸 Snapshot of MVP
 A glimpse into our functional Emergency Response System.
 
-### 1. Call Center Dashboard
-Real-time view of active emergencies and ambulance tracking.
-![Call Center Dashboard](photos/1.jpeg)
+![Snapshot 1](photos/1.jpeg)
 
-### 2. Ambulance Driver Portal
-Mobile-optimized interface for navigation and status updates.
-![Driver App](photos/2.jpeg)
+![Snapshot 2](photos/2.jpeg)
 
-### 3. Location Sharing (Glassmorphism UI)
-Modern, calming interface for victims to share their location.
-![Location Share](photos/3.jpeg)
+![Snapshot 3](photos/3.jpeg)
 
-### 4. Real-time Tracking
-Live updates for both the dispatcher and the victim.
-![Live Tracking](photos/4.jpeg)
+![Snapshot 4](photos/4.jpeg)
 
 ---
 
