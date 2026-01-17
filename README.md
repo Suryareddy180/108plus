@@ -56,38 +56,6 @@ Thank you for reviewing **techmedics-108+**. We have built a robust, real-time E
 
 ---
 
-## 🏗️ System Architecture & Workflow
-
-### 1. High-Level Architecture
-Our system enables seamless real-time communication between the victim, server, and ambulance driver.
-![System Architecture](photos/architecture.png)
-
-**Key Components:**
-*   **Flask Backend**: Orchestrates the logic and database interactions.
-*   **Socket.IO**: Powers the sub-100ms real-time tracking updates.
-*   **SMS Fallback**: Ensures users in remote areas (2G/No Data) are still located instantly.
-
-### 2. Process Flow
-From the distress call to the ambulance arrival, every step is automated.
-![Process Flow Diagram](photos/flow%20digram.png)
-
----
-
-## 📸 MVP Snapshots (Live Demo)
-A glimpse into the core interface used by Dispatchers and Drivers.
-
-### Dashboard & Tracking
-| **Call Center Dashboard** | **Real-Time Tracking** |
-|:---:|:---:|
-| ![Dashboard](photos/1.jpeg) | ![Tracking](photos/2.jpeg) |
-
-### Mobile Interface
-| **Ambulance Driver App** | **Location Sharing** |
-|:---:|:---:|
-| ![Driver App](photos/3.jpeg) | ![Mobile View](photos/4.jpeg) |
-
----
-
 ## 📺 Project Walkthrough
 If you cannot test it live, watch our full demonstration video here:
 [**WATCH DEMO VIDEO**](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
@@ -107,6 +75,39 @@ If you cannot test it live, watch our full demonstration video here:
 - **Database**: SQLite (SQLAlchemy)
 - **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript
 - **Deployment**: Render (Cloud)
+
+---
+
+## 🏗️ Architecture & Workflow
+
+### Process Flow
+The 108+ system ensures a seamless flow of information from the distress call to the ambulance arrival, prioritizing speed and reliability.
+![Process Flow Diagram](photos/flow%20digram.png)
+
+### System Architecture
+Built on a robust Flask backend with Socket.IO for real-time events, our architecture supports both high-speed data connections and low-bandwidth SMS fallbacks.
+![System Architecture](photos/architecture.png)
+
+---
+
+## 📸 Snapshot of MVP
+A glimpse into our functional Emergency Response System.
+
+### 1. Call Center Dashboard
+Real-time view of active emergencies and ambulance tracking.
+![Call Center Dashboard](photos/1.jpeg)
+
+### 2. Ambulance Driver Portal
+Mobile-optimized interface for navigation and status updates.
+![Driver App](photos/2.jpeg)
+
+### 3. Location Sharing (Glassmorphism UI)
+Modern, calming interface for victims to share their location.
+![Location Share](photos/3.jpeg)
+
+### 4. Real-time Tracking
+Live updates for both the dispatcher and the victim.
+![Live Tracking](photos/4.jpeg)
 
 ---
 
