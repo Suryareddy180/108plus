@@ -15,11 +15,11 @@ Welcome to **ATLAS – GDG on Campus Hackathon**, hosted by **GDG on Campus - NI
 **Theme**: Emergency Response & Healthcare  
 **Team**: DOONDILEONS
 
-### 👥 Meet The Team
 <div align="center">
-  <img src="photos/about.jpeg" alt="DOONDILEONS Team" width="600" />
+  <img src="photos/about.jpeg" alt="Project Overview" width="800" />
 </div>
 
+### 👥 Meet The Team
 1. **Nallimilli Surya Prakash Reddy**
 2. **Mandela Doondi Usha Sri**
 3. **Vinayaka Gowdra chandrashekarappa**
