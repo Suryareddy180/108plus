@@ -1,16 +1,25 @@
-# techmedics-108+ (ATLAS Hackathon Edition)
+<div align="center">
+  <img src="photos/teamlogo%20.jpeg" alt="TechMedics 108+ Logo" width="150" height="auto" />
+  <h1>techmedics-108+</h1>
+  <p><strong>ATLAS Hackathon Edition</strong> | <em>Bridging the Gap: From Panic to Precision</em></p>
 
-[![Deployed on Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://techmedics-108.onrender.com/)
-[![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
+  [![Deployed on Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://techmedics-108.onrender.com/)
+  [![Demo Video](https://img.shields.io/badge/Watch-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
+</div>
 
-## 🏆 Hackathon Context: ATLAS
+---
+
+## 📅 Hackathon Context: ATLAS
 Welcome to **ATLAS – GDG on Campus Hackathon**, hosted by **GDG on Campus - NIST** and powered by **Hack2skill**.
 
-**Project**: techmedics-108+
-**Theme**: Emergency Response & Healthcare
+**Theme**: Emergency Response & Healthcare  
 **Team**: DOONDILEONS
 
-### 👥 The Team
+### 👥 Meet The Team
+<div align="center">
+  <img src="photos/about.jpeg" alt="DOONDILEONS Team" width="600" />
+</div>
+
 1. **Nallimilli Surya Prakash Reddy**
 2. **Mandela Doondi Usha Sri**
 3. **Vinayaka Gowdra chandrashekarappa**
@@ -30,7 +39,6 @@ Welcome to **ATLAS – GDG on Campus Hackathon**, hosted by **GDG on Campus - NI
 *   **Dr. Sandipan Mallik** (Professor, ECE, NIST University)
 
 **Dear Jury Members,**
-
 Thank you for reviewing **techmedics-108+**. We have built a robust, real-time Emergency Response System that works even in low-bandwidth scenarios.
 
 ### Step-by-Test Instructions:
@@ -39,20 +47,48 @@ Thank you for reviewing **techmedics-108+**. We have built a robust, real-time E
 *   **Step 1**: Open the [Call Center Dashboard](https://techmedics-108.onrender.com/callcenter) in one tab.
 *   **Step 2**: Open the [Ambulance App](https://techmedics-108.onrender.com/api/ambulance/app) in a second tab (or Incognito window).
     *   **Login**: Use ID `DVG-AMB-001` (Pre-loaded test account).
-*   **Step 3**: On the Call Center, initiate a call with any number (e.g., `9876543210`).
+*   **Step 3**: On the Call Center, initiate a call with any number.
 *   **Step 4**: Click "Assign Nearest Ambulance".
 *   **Result**: Watch the Ambulance App instantly receive an **"EMERGENCY ALERT"** popup without refreshing the page!
 
 #### 2. Advanced Location Sharing (Glassmorphism UI)
-*   **Step 1**: After initiating a call, click **"Share Location"**.
-*   **Step 2**: Open the generated link on your phone.
+*   **Step 1**: Click **"Share Location"**.
+*   **Step 2**: Open the link on your phone.
 *   **Step 3**: Click **"Share My Exact Location"**.
-*   **Result**: The dispatcher map updates *instantly* with the victim's precise GPS coordinates.
+*   **Result**: The dispatcher map updates *instantly* with precise GPS coordinates.
 
-#### 3. Why This Wins?
-*   ✅ **Zero-Setup Login**: Test drivers (`DVG-AMB-001`) are auto-created on every deploy.
-*   ✅ **Resilient**: Works on minimal internet using optimized sockets.
-*   ✅ **User-Centric Design**: Modern "Glassmorphism" UI for high-stress usability.
+---
+
+## 🏗️ Architecture & Workflow
+
+### Process Flow
+The 108+ system ensures a seamless flow of information from the distress call to the ambulance arrival.
+<div align="center">
+  <img src="photos/flow%20digram.png" alt="Process Flow Diagram" width="700" />
+</div>
+
+### System Architecture
+Robust Flask backend with Socket.IO supporting both high-speed connections and SMS fallbacks.
+<div align="center">
+  <img src="photos/architecture.png" alt="System Architecture" width="700" />
+</div>
+
+---
+
+## 📸 Snapshots of MVP
+A glimpse into our functional Emergency Response System.
+
+<div align="center">
+  <img src="photos/1.jpeg" alt="Call Center" width="45%" />
+  <img src="photos/2.jpeg" alt="Driver App" width="45%" />
+</div>
+<div align="center">
+  <img src="photos/3.jpeg" alt="Location Share" width="45%" />
+  <img src="photos/4.jpeg" alt="Live Tracking" width="45%" />
+</div>
+<div align="center">
+  <img src="photos/5.jpeg" alt="Snapshot 5" width="60%" />
+</div>
 
 ---
 
@@ -65,42 +101,19 @@ If you cannot test it live, watch our full demonstration video here:
 ## 🛠️ Key Features
 - **Real-time Dispatch**: Socket.IO powered instant communication.
 - **Smart Assignment**: Algorithms to find the nearest available ambulance.
-- **Offline-First SMS**: Fallback SMS protocol for areas with no data.
-- **Responsive Design**: Mobile-first interface for drivers and victims.
-- **Live Tracking**: Leaflet.js maps for real-time visualization.
+- **Offline-First SMS**: Fallback SMS protocol.
+- **Responsive Design**: Mobile-first interface.
+- **Live Tracking**: Leaflet.js maps.
 
 ## 💻 Tech Stack
 - **Backend**: Python (Flask)
 - **Real-time**: Socket.IO
 - **Database**: SQLite (SQLAlchemy)
-- **Frontend**: HTML5, CSS3 (Glassmorphism), JavaScript
+- **Frontend**: HTML5, CSS3 (Glassmorphism)
 - **Deployment**: Render (Cloud)
 
 ---
 
-## 🏗️ Architecture & Workflow
-
-### Process Flow
-The 108+ system ensures a seamless flow of information from the distress call to the ambulance arrival, prioritizing speed and reliability.
-![Process Flow Diagram](photos/flow%20digram.png)
-
-### System Architecture
-Built on a robust Flask backend with Socket.IO for real-time events, our architecture supports both high-speed data connections and low-bandwidth SMS fallbacks.
-![System Architecture](photos/architecture.png)
-
----
-
-## 📸 Snapshot of MVP
-A glimpse into our functional Emergency Response System.
-
-![Snapshot 1](photos/1.jpeg)
-
-![Snapshot 2](photos/2.jpeg)
-
-![Snapshot 3](photos/3.jpeg)
-
-![Snapshot 4](photos/4.jpeg)
-
----
-
-© 2026 TechMedics Team | Built for ATLAS Hackathon
+<div align="center">
+  <p>© 2026 TechMedics Team | Built for ATLAS Hackathon</p>
+</div>
