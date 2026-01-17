@@ -2,6 +2,9 @@
 Improved Emergency Response System application with better path handling.
 """
 
+import eventlet
+eventlet.monkey_patch()
+
 import os
 import sqlite3
 import uuid
@@ -100,9 +103,6 @@ def init_db_tables():
     except Exception as e:
         print(f"Error initializing database tables: {e}")
 
-# Run initialization
-init_db_tables()
-
 # Initialize SocketIO
 socketio = SocketIO(app, cors_allowed_origins="*")
 
@@ -116,6 +116,9 @@ def get_db():
         db = g._database = sqlite3.connect(DATABASE)
         db.row_factory = sqlite3.Row  # This enables column access by name
     return db
+
+# Run initialization (must be after get_db is defined)
+init_db_tables()
 
 def query_db(query, args=(), one=False):
     try:
