@@ -56,6 +56,38 @@ Thank you for reviewing **techmedics-108+**. We have built a robust, real-time E
 
 ---
 
+## 🏗️ System Architecture & Workflow
+
+### 1. High-Level Architecture
+Our system enables seamless real-time communication between the victim, server, and ambulance driver.
+![System Architecture](photos/architecture.png)
+
+**Key Components:**
+*   **Flask Backend**: Orchestrates the logic and database interactions.
+*   **Socket.IO**: Powers the sub-100ms real-time tracking updates.
+*   **SMS Fallback**: Ensures users in remote areas (2G/No Data) are still located instantly.
+
+### 2. Process Flow
+From the distress call to the ambulance arrival, every step is automated.
+![Process Flow Diagram](photos/flow%20digram.png)
+
+---
+
+## 📸 MVP Snapshots (Live Demo)
+A glimpse into the core interface used by Dispatchers and Drivers.
+
+### Dashboard & Tracking
+| **Call Center Dashboard** | **Real-Time Tracking** |
+|:---:|:---:|
+| ![Dashboard](photos/1.jpeg) | ![Tracking](photos/2.jpeg) |
+
+### Mobile Interface
+| **Ambulance Driver App** | **Location Sharing** |
+|:---:|:---:|
+| ![Driver App](photos/3.jpeg) | ![Mobile View](photos/4.jpeg) |
+
+---
+
 ## 📺 Project Walkthrough
 If you cannot test it live, watch our full demonstration video here:
 [**WATCH DEMO VIDEO**](https://drive.google.com/file/d/1XYbmHxfMWaXSHama5ysZLa_DLIiKNXnn/view?usp=sharing)
