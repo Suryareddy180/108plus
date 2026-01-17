@@ -24,6 +24,11 @@ Welcome to **ATLAS – GDG on Campus Hackathon**, hosted by **GDG on Campus - NI
 ---
 
 ## 👨‍⚖️ For the Jury: Verification Guide
+**Distinguished Jury Members:**
+*   **Dr. Sushanta Kumar** (Associate Professor, ME, NIST University)
+*   **Mr. Prabhas Raj** (Founder and CEO, Protionix Group)
+*   **Dr. Sandipan Mallik** (Professor, ECE, NIST University)
+
 **Dear Jury Members,**
 
 Thank you for reviewing **techmedics-108+**. We have built a robust, real-time Emergency Response System that works even in low-bandwidth scenarios.
